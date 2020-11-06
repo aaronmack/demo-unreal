@@ -1,3 +1,20 @@
+# ****************************************************
+
+# Houdini HDA
+backup
+
+# Unreal Project
+Saved
+DerivedDataCache
+Intermediate
+Binaries
+
+# Unreal C++ Projecs
+unreal_basal/unreal_basal.sln
+ue_houdini_general/terrain_CXX4_25/Terrain_CXX4_25.sln
+
+# ****************************************************
+
 ##### Windows
 # Windows thumbnail cache files
 Thumbs.db
@@ -1038,11 +1055,3 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
-
-# ****************************************************
-
-Saved
-DerivedDataCache
-Intermediate
-Binaries
-unreal_basal/unreal_basal.sln
