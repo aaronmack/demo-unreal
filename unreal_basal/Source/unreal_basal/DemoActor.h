@@ -15,6 +15,15 @@ public:
 	// Sets default values for this actor's properties
 	ADemoActor();
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "DemoActor")
+		float FloatSpeed = 20.0f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "DemoActor")
+		float RotationSpeed = 20.0f;
+
+	UPROPERTY(VisibleAnywhere)
+	UStaticMeshComponent* VisualMesh;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
