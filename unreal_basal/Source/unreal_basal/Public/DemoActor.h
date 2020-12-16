@@ -6,6 +6,8 @@
 #include "GameFramework/Actor.h"
 #include "DemoActor.generated.h"
 
+void DemoActorUsefulFunction1();
+
 UCLASS()
 class UNREAL_BASAL_API ADemoActor : public AActor
 {
@@ -31,5 +33,4 @@ protected:
 public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-
 };

@@ -5,7 +5,10 @@
 #include "CoreMinimal.h"
 #include "Modules/ModuleManager.h"
 #include "HAL/IConsoleManager.h"
-#include "unreal_basal.h"
+//#include "unreal_basal.h"
+//#include "DemoBlueprintFunctionLibrary.h"
+
+void DemoBlackUsefulFunction();
 
 class FDemoBlackModule : public IModuleInterface
 {

@@ -48,3 +48,6 @@ void ADemoActor::Tick(float DeltaTime)
 	SetActorLocationAndRotation(NewLocation, NewRotation);
 }
 
+void DemoActorUsefulFunction1() {
+
+}

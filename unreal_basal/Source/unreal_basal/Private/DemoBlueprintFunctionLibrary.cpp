@@ -12,3 +12,15 @@ bool UDemoBlueprintFunctionLibrary::UsefulFunction()
 	//Does something
 	return false;
 }
+
+bool UDemoBlueprintFunctionLibrary::UsefulFunction1()
+{
+	
+	// DemoThirdPartyLibraryUsefulFunction();
+	// FDemoThirdPartyLibraryModule a;
+
+	UE_LOG(LogTemp, Log, TEXT("UDemoBlueprintFunctionLibrary::UsefulFunction1 Value %d"), -2);
+
+	//Does something
+	return false;
+}

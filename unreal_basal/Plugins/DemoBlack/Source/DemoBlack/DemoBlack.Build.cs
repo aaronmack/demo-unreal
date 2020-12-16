@@ -1,5 +1,6 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
+using System.IO;
 using UnrealBuildTool;
 
 public class DemoBlack : ModuleRules
@@ -11,16 +12,19 @@ public class DemoBlack : ModuleRules
 		PublicIncludePaths.AddRange(
 			new string[] {
 				// ... add public include paths required here ...
-                ModuleDirectory+"/../../../../Source/unreal_basal",
-                ModuleDirectory+"/../../../../Source/unreal_basal/Public",
+                Path.Combine( ModuleDirectory, "..", "..", "..", "..", "Source", "unreal_basal", "Public"),
+                Path.Combine( ModuleDirectory, "..", "..", "..", "..", "Source", "unreal_basal"),
+                Path.Combine( ModuleDirectory, "..", "..", "..", "DemoThirdPartyLibrary", "Source", "ThirdParty", "DemoThirdPartyLibraryLibrary" ),
             }
 			);
-				
-		
-		PrivateIncludePaths.AddRange(
+
+        PublicAdditionalLibraries.Add(Path.Combine(ModuleDirectory, "..", "..", "..", "..", "Intermediate", "Build", "Win64", "UE4Editor", "Development", "unreal_basal", "UE4Editor-unreal_basal.lib"));
+
+
+        PrivateIncludePaths.AddRange(
 			new string[] {
 				// ... add other private include paths required here ...
-			}
+            }
 			);
 			
 		
@@ -29,6 +33,8 @@ public class DemoBlack : ModuleRules
 			{
 				"Core",
 				// ... add other public dependencies that you statically link with here ...
+                "unreal_basal",
+                "DemoThirdPartyLibraryLibrary"
             }
 			);
 			
@@ -41,7 +47,6 @@ public class DemoBlack : ModuleRules
 				"Slate",
 				"SlateCore",
 				// ... add private dependencies that you statically link with here ...
-                "unreal_basal",
             }
 			);
 		
@@ -50,7 +55,7 @@ public class DemoBlack : ModuleRules
 			new string[]
 			{
 				// ... add any modules that your module loads dynamically here ...
-			}
+            }
 			);
 	}
 }

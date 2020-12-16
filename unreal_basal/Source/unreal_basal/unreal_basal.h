@@ -33,3 +33,6 @@ static FAutoConsoleCommandWithWorldAndArgs GMyCoolCommand(
 		UE_LOG(LogTemp, Log, TEXT("My cool command was passed %d args"), Args.Num());
 	})
 );
+
+void UsefulBasalFunction1();
+int UsefulBasalFunction2();

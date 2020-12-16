@@ -26,7 +26,11 @@ public class DemoThirdPartyLibrary : ModuleRules
 			new string[]
 			{
 				"Core",
-				"DemoThirdPartyLibraryLibrary",
+                "CoreUObject",
+                "Engine",
+                "InputCore",
+
+                "DemoThirdPartyLibraryLibrary",
 				"Projects"
 				// ... add other public dependencies that you statically link with here ...
 			}

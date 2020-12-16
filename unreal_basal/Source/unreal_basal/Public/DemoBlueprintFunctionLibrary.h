@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
+#include "DemoThirdPartyLibrary.h"
 #include "DemoBlueprintFunctionLibrary.generated.h"
 
 /**
@@ -16,4 +17,7 @@ class UNREAL_BASAL_API UDemoBlueprintFunctionLibrary : public UBlueprintFunction
 	/** Starts an analytics session without any custom attributes specified */
 	UFUNCTION(BlueprintCallable, Category = "MyDemoBlueprint")
 	static bool UsefulFunction();
+
+	UFUNCTION(BlueprintCallable, Category = "MyDemoBlueprint")
+	static bool UsefulFunction1();
 };

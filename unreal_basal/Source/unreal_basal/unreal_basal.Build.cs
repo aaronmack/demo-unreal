@@ -6,13 +6,15 @@ public class unreal_basal : ModuleRules
 {
 	public unreal_basal(ReadOnlyTargetRules Target) : base(Target)
 	{
+        // what's is the different?
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
+        //PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
 
         PublicIncludePaths.AddRange(new string[] {} );
 
         PrivateIncludePaths.AddRange(new string[] {});
 
-        PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
+        PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "DemoThirdPartyLibrary" });
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 

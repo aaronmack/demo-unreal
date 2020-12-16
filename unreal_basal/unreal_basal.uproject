@@ -26,6 +26,10 @@
 			"Name": "Restart",
 			"Enabled": true,
 			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/1bf89025ddf246e3af3c196d0426e0d3"
+		},
+		{
+			"Name": "GeometryCacheAbcFile",
+			"Enabled": true
 		}
 	]
 }

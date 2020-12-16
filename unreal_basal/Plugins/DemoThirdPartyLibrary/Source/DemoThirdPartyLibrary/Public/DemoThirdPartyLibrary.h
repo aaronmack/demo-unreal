@@ -1,8 +1,11 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
 #pragma once
-
+#include "CoreMinimal.h"
 #include "Modules/ModuleManager.h"
+
+UFUNCTION(BlueprintCallable)
+void DemoThirdPartyLibraryUsefulFunction();
 
 class FDemoThirdPartyLibraryModule : public IModuleInterface
 {
