@@ -18,7 +18,7 @@ public class DemoBlack : ModuleRules
             }
 			);
 
-        PublicAdditionalLibraries.Add(Path.Combine(ModuleDirectory, "..", "..", "..", "..", "Intermediate", "Build", "Win64", "UE4Editor", "Development", "unreal_basal", "UE4Editor-unreal_basal.lib"));
+        // PublicAdditionalLibraries.Add(Path.Combine(ModuleDirectory, "..", "..", "..", "..", "Intermediate", "Build", "Win64", "UE4Editor", "Development", "unreal_basal", "UE4Editor-unreal_basal.lib"));
 
 
         PrivateIncludePaths.AddRange(

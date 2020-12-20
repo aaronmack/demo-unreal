@@ -16,6 +16,8 @@ ue_houdini_general/terrain_CXX4_25/Terrain_CXX4_25.sln
 # Unreal Plugins
 unreal_basal/Plugins/UnrealEnginePython
 
+# Houdini Engine temp
+ue_houdini_general/terrain_example/Content/HoudiniEngine/Temp
 # ****************************************************
 
 ##### Windows
