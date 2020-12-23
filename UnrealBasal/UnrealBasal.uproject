@@ -1,0 +1,65 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "{22E32999-4D56-4D88-7FFD-2B8F18895546}",
+	"Category": "",
+	"Description": "",
+  "Modules": [
+    {
+      "Name": "UnrealBasal",
+      "Type": "Runtime",
+      "LoadingPhase": "Default",
+      "AdditionalDependencies": [
+        "Engine"
+      ]
+    },
+    {
+      "Name": "UTGame",
+      "Type": "Runtime",
+      "LoadingPhase": "Default",
+      "AdditionalDependencies": [
+        "Engine",
+        "UnrealBasal",
+        "DemoBlack"
+      ]
+    },
+    {
+      "Name": "UTCombat",
+      "Type": "Runtime",
+      "LoadingPhase": "Default",
+      "AdditionalDependencies": [
+        "Engine"
+      ]
+    }
+  ],
+	"Plugins": [
+		{
+			"Name": "PythonScriptPlugin",
+			"Enabled": true
+		},
+		{
+			"Name": "HoudiniEngine",
+			"Enabled": true
+		},
+		{
+			"Name": "Restart",
+			"Enabled": true,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/1bf89025ddf246e3af3c196d0426e0d3"
+		},
+		{
+			"Name": "GeometryCacheAbcFile",
+			"Enabled": true
+		},
+		{
+			"Name": "UnrealEnginePython",
+			"Enabled": false
+		},
+		{
+			"Name": "AlembicHairImporter",
+			"Enabled": true
+		},
+		{
+			"Name": "USDImporter",
+			"Enabled": true
+		}
+	]
+}

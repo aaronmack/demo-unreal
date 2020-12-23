@@ -9,10 +9,6 @@ DerivedDataCache
 Intermediate
 Binaries
 
-# Unreal C++ Projecs
-unreal_basal/unreal_basal.sln
-ue_houdini_general/terrain_CXX4_25/Terrain_CXX4_25.sln
-
 # Unreal Plugins
 unreal_basal/Plugins/UnrealEnginePython
 
