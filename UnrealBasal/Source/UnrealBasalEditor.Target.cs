@@ -13,5 +13,6 @@ public class UnrealBasalEditorTarget : TargetRules
 		ExtraModuleNames.AddRange( new string[] { "UnrealBasal" } );
 		ExtraModuleNames.AddRange( new string[] { "UTGame" } );
         ExtraModuleNames.AddRange(new string[] { "UTCombat" });
+        ExtraModuleNames.AddRange(new string[] { "UTFirstPerson" });
     }
 }
