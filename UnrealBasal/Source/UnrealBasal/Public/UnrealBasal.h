@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "HAL/IConsoleManager.h"
+
 #define DllExport   __declspec( dllexport )
 
 int32 GSomeCoolDebugValue = -1;
@@ -34,6 +35,7 @@ static FAutoConsoleCommandWithWorldAndArgs GMyCoolCommand(
 		UE_LOG(LogTemp, Log, TEXT("My cool command was passed %d args"), Args.Num());
 	})
 );
+
 
 DllExport void UnrealBasalUsefulFunction1();
 DllExport int UnrealBasalUsefulFunction2();

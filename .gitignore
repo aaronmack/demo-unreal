@@ -10,7 +10,8 @@ Intermediate
 Binaries
 
 # Unreal Plugins
-unreal_basal/Plugins/UnrealEnginePython
+UnrealBasal/Plugins/UnrealEnginePython
+UnrealBasal/Plugins/LuaMachine
 
 # Houdini Engine temp
 ue_houdini_general/terrain_example/Content/HoudiniEngine/Temp

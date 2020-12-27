@@ -6,6 +6,19 @@
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "DemoBlueprintFunctionLibrary.generated.h"
 
+// Must include "xxx.generated.h"
+USTRUCT(BlueprintType)
+struct FDemoStruct
+{
+	GENERATED_USTRUCT_BODY()
+
+		FDemoStruct() {}
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "DemoStruct")
+		bool m_isLocked = false;
+};
+
+
 /**
  * 
  */
@@ -24,4 +37,14 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "MyDemoBlueprint")
 	static int UsefulFunction2();
 
+
+public:
+	UFUNCTION(BlueprintPure, Category="PythonDemo", meta=(ScriptMethod="IsLocked"))
+	static bool IsStructLocked(const FDemoStruct& InStruct);
+
+	UFUNCTION(BlueprintCallable, Category = "PythonDemo", meta = (ScriptMethod = "Lock"))
+	static bool LockStruct(UPARAM(ref) FDemoStruct& InStruct);
+
+	UFUNCTION(BlueprintCallable, Category = "PythonDemo", meta = (ScriptMethod = "UnLock"))
+	static bool UnlockStruct(UPARAM(ref) FDemoStruct& InStruct);
 };

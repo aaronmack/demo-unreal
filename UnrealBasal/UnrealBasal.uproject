@@ -11,7 +11,8 @@
 			"AdditionalDependencies": [
 				"Engine",
 				"Slate",
-				"SlateCore"
+				"SlateCore",
+				"CoreUObject"
 			]
 		},
 		{
@@ -74,6 +75,44 @@
 		{
 			"Name": "NiagaraExtras",
 			"Enabled": true
+		},
+		{
+			"Name": "DatasmithFBXImporter",
+			"Enabled": false
+		},
+		{
+			"Name": "DatasmithGLTFImporter",
+			"Enabled": false
+		},
+		{
+			"Name": "DatasmithIFCImporter",
+			"Enabled": false,
+			"SupportedTargetPlatforms": [
+				"Win64"
+			]
+		},
+		{
+			"Name": "DatasmithImporter",
+			"Enabled": false
+		},
+		{
+			"Name": "DatasmithRuntime",
+			"Enabled": false
+		},
+		{
+			"Name": "DatasmithCADImporter",
+			"Enabled": false,
+			"SupportedTargetPlatforms": [
+				"Win64"
+			]
+		},
+		{
+			"Name": "DatasmithC4DImporter",
+			"Enabled": false,
+			"SupportedTargetPlatforms": [
+				"Win64",
+				"Mac"
+			]
 		}
 	]
 }

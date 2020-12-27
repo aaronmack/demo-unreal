@@ -27,3 +27,20 @@ int UDemoBlueprintFunctionLibrary::UsefulFunction2() {
 	//Does something
 	return 1;
 }
+
+bool UDemoBlueprintFunctionLibrary::IsStructLocked(const FDemoStruct& InStruct)
+{
+	return InStruct.m_isLocked;
+}
+
+bool UDemoBlueprintFunctionLibrary::LockStruct(FDemoStruct& InStruct)
+{
+	InStruct.m_isLocked = true;
+	return true;
+}
+
+bool UDemoBlueprintFunctionLibrary::UnlockStruct(FDemoStruct& InStruct)
+{
+	InStruct.m_isLocked = false;
+	return true;
+}
