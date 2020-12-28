@@ -30,17 +30,21 @@ int UDemoBlueprintFunctionLibrary::UsefulFunction2() {
 
 bool UDemoBlueprintFunctionLibrary::IsStructLocked(const FDemoStruct& InStruct)
 {
-	return InStruct.m_isLocked;
+	return InStruct.lock_count > 0;
 }
 
-bool UDemoBlueprintFunctionLibrary::LockStruct(FDemoStruct& InStruct)
+void UDemoBlueprintFunctionLibrary::LockStruct(FDemoStruct& InStruct)
 {
-	InStruct.m_isLocked = true;
-	return true;
+	++InStruct.lock_count;
 }
 
-bool UDemoBlueprintFunctionLibrary::UnlockStruct(FDemoStruct& InStruct)
+void UDemoBlueprintFunctionLibrary::UnlockStruct(FDemoStruct& InStruct)
 {
-	InStruct.m_isLocked = false;
-	return true;
+	if (InStruct.lock_count == 0) {
+		FFrame::KismetExecutionMessage(TEXT("LockCount was zero!"), ELogVerbosity::Error);
+	}
+	else
+	{
+		--InStruct.lock_count;
+	}
 }

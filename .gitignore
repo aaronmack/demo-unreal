@@ -12,6 +12,8 @@ Binaries
 # Unreal Plugins
 UnrealBasal/Plugins/UnrealEnginePython
 UnrealBasal/Plugins/LuaMachine
+UnrealBasal/Plugins/TextAsset
+
 
 # Houdini Engine temp
 ue_houdini_general/terrain_example/Content/HoudiniEngine/Temp

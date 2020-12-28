@@ -12,10 +12,10 @@ struct FDemoStruct
 {
 	GENERATED_USTRUCT_BODY()
 
-		FDemoStruct() {}
-
+		FDemoStruct(int new_lock_count = 0): lock_count(new_lock_count) {}
+public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "DemoStruct")
-		bool m_isLocked = false;
+		int lock_count = 0;
 };
 
 
@@ -43,8 +43,8 @@ public:
 	static bool IsStructLocked(const FDemoStruct& InStruct);
 
 	UFUNCTION(BlueprintCallable, Category = "PythonDemo", meta = (ScriptMethod = "Lock"))
-	static bool LockStruct(UPARAM(ref) FDemoStruct& InStruct);
+	static void LockStruct(UPARAM(ref) FDemoStruct& InStruct);
 
-	UFUNCTION(BlueprintCallable, Category = "PythonDemo", meta = (ScriptMethod = "UnLock"))
-	static bool UnlockStruct(UPARAM(ref) FDemoStruct& InStruct);
+	UFUNCTION(BlueprintCallable, Category = "PythonDemo", meta = (ScriptMethod = "Unlock"))
+	static void UnlockStruct(UPARAM(ref) FDemoStruct& InStruct);
 };
