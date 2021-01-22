@@ -13,6 +13,7 @@ Binaries
 UnrealBasal/Plugins/UnrealEnginePython
 UnrealBasal/Plugins/LuaMachine
 UnrealBasal/Plugins/TextAsset
+UnrealBasal/Plugins/MegascansPlugin
 
 
 # Houdini Engine temp
