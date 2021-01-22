@@ -78,26 +78,26 @@
 		},
 		{
 			"Name": "DatasmithFBXImporter",
-			"Enabled": false
+			"Enabled": true
 		},
 		{
 			"Name": "DatasmithGLTFImporter",
-			"Enabled": false
+			"Enabled": true
 		},
 		{
 			"Name": "DatasmithIFCImporter",
-			"Enabled": false,
+			"Enabled": true,
 			"SupportedTargetPlatforms": [
 				"Win64"
 			]
 		},
 		{
 			"Name": "DatasmithImporter",
-			"Enabled": false
+			"Enabled": true
 		},
 		{
 			"Name": "DatasmithRuntime",
-			"Enabled": false
+			"Enabled": true
 		},
 		{
 			"Name": "DatasmithCADImporter",

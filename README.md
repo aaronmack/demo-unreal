@@ -60,3 +60,25 @@ SAFLAGS = $(DSOFLAGS)
 ## Unreal Plugins
 
 * `Restart` from Unreal MarcketPlace
+
+# Misc
+
+## Change "EngineAssociation" for UnrealProject
+*https://answers.unrealengine.com/questions/43614/uproject-files-engineassociation-saves-a-guid-whic.html*
+
+* Use Key
+  * Register: `HKEY_CURRENT_USER/Software/Epic Games/Unreal Engine/Builds`
+  * Original Backup: {22E32999-4D56-4D88-7FFD-2B8F18895546}    G:/Documents/UnrealEngine
+
+* Use Env
+  * ENGINE_GUID: {22E32999-4D56-4D88-7FFD-2B8F18895546}
+
+```bash
+{
+	"FileVersion": 3,
+	"EngineAssociation": "%ENGINE_GUID%",
+	"Category": "",
+	"Description": "",
+  ...
+}
+```
