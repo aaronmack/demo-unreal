@@ -17,6 +17,30 @@ UGrabber::UGrabber()
 }
 
 
+void UGrabber::Grab()
+{
+	AActor* HitActor;
+	UPrimitiveComponent* HitComponent;
+	if (TraceForPhysicsBodies(HitActor, HitComponent))
+	{
+		HitComponent->SetSimulatePhysics(true);
+		GetPhysicsComponent()->GrabComponentAtLocationWithRotation(
+			HitComponent,
+			NAME_None,
+			HitComponent->GetCenterOfMass(),
+			FRotator()
+		);
+		NotifyQuestActor(HitActor);
+	}
+	UE_LOG(LogTemp, Warning, TEXT("Grabber Grab"));
+}
+
+void UGrabber::Release()
+{
+	GetPhysicsComponent()->ReleaseComponent();
+	UE_LOG(LogTemp, Warning, TEXT("Grabber Release"));
+}
+
 // Called when the game starts
 void UGrabber::BeginPlay()
 {
@@ -30,7 +54,7 @@ void UGrabber::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompone
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
-	UE_LOG(LogTemp, Warning, TEXT("Grabber TickComponent"));
+	// UE_LOG(LogTemp, Warning, TEXT("Grabber TickComponent"));
 }
 
 FVector UGrabber::GetMaxGrabLocation() const
