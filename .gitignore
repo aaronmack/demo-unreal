@@ -17,6 +17,7 @@ UnrealBasal/Plugins/MegascansPlugin
 
 # Unreal VS Project
 UnrealBasal/UnrealBasal.sln
+ue_houdini_general/terrain_example/terrain_example.sln
 
 # Houdini Engine temp
 ue_houdini_general/terrain_example/Content/HoudiniEngine/Temp
