@@ -14,6 +14,7 @@ public class UnrealBasalTarget : TargetRules
 		ExtraModuleNames.AddRange( new string[] { "UTGame" } );
         ExtraModuleNames.AddRange(new string[] { "UTCombat" });
         ExtraModuleNames.AddRange(new string[] { "UTFirstPerson" });
-
+		// ExtraModuleNames.Add("UTTwinStick");
+		ExtraModuleNames.AddRange(new string[] { "UTTwinStick" });
     }
 }
