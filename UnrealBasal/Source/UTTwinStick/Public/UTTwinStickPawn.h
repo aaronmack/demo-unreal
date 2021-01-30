@@ -6,6 +6,8 @@
 #include "GameFramework/Character.h"
 #include "UTTwinStickPawn.generated.h"
 
+class AUTTwinStickProjectile;
+
 UCLASS(Blueprintable)
 class AUTTwinStickPawn : public APawn
 {
@@ -25,6 +27,9 @@ class AUTTwinStickPawn : public APawn
 
 public:
 	AUTTwinStickPawn();
+
+	UPROPERTY(EditAnywhere, Category="Projectile")
+	TSubclassOf<AUTTwinStickProjectile> Projectile;
 
 	/** Offset from the ships location to spawn projectiles */
 	UPROPERTY(Category = Gameplay, EditAnywhere, BlueprintReadWrite )
