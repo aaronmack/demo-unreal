@@ -4,7 +4,7 @@
 #include "Core.h"
 #include "Modules/ModuleManager.h"
 #include "Interfaces/IPluginManager.h"
-#include "DemoThirdPartyLibraryLibrary/ExampleLibrary.h"
+#include "ExampleLibrary.h"
 
 #define LOCTEXT_NAMESPACE "FDemoThirdPartyLibraryModule"
 
@@ -16,15 +16,29 @@ void FDemoThirdPartyLibraryModule::StartupModule()
 {
 	// This code will execute after your module is loaded into memory; the exact timing is specified in the .uplugin file per-module
 
+	UE_LOG(LogTemp, Log, TEXT("DemoThirdPartyLibrary: StartupModule"));
+	
 	// Get the base directory of this plugin
-	FString BaseDir = IPluginManager::Get().FindPlugin("DemoThirdPartyLibrary")->GetBaseDir();
+	auto tp = IPluginManager::Get().FindPlugin("MyExampleThirdParty");
+	FString BaseDir;
+	if(tp != nullptr)
+	{
+		BaseDir = tp->GetBaseDir();
+	}
+	else
+	{
+		UE_LOG(LogTemp, Error, TEXT("DemoThirdPartyLibrary: Not found `MyExampleThirdParty`"));
+		BaseDir = FPaths::Combine(FPaths::ProjectPluginsDir(), TEXT("DemoThirdPartyLibrary"));
+	}
 
+	UE_LOG(LogTemp, Log, TEXT("DemoThirdPartyLibrary: BaseDir: %s"), *BaseDir);
+	
 	// Add on the relative location of the third party dll and load it
 	FString LibraryPath;
 #if PLATFORM_WINDOWS
-	LibraryPath = FPaths::Combine(*BaseDir, TEXT("Binaries/ThirdParty/DemoThirdPartyLibraryLibrary/Win64/ExampleLibrary.dll"));
+	LibraryPath = FPaths::Combine(*BaseDir, TEXT("Binaries/ThirdParty/MyExampleThirdParty/Win64/ExampleLibrary.dll"));
 #elif PLATFORM_MAC
-    LibraryPath = FPaths::Combine(*BaseDir, TEXT("Source/ThirdParty/DemoThirdPartyLibraryLibrary/Mac/Release/libExampleLibrary.dylib"));
+    LibraryPath = FPaths::Combine(*BaseDir, TEXT("Source/ThirdParty/MyExampleThirdParty/Mac/Release/libExampleLibrary.dylib"));
 #endif // PLATFORM_WINDOWS
 
 	ExampleLibraryHandle = !LibraryPath.IsEmpty() ? FPlatformProcess::GetDllHandle(*LibraryPath) : nullptr;

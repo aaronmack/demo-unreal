@@ -10,7 +10,7 @@ public class UTGame : ModuleRules
 	
 		PublicDependencyModuleNames.AddRange(new string[] {
             "Core", "CoreUObject", "Engine", "InputCore",
-            "DemoThirdPartyLibraryLibrary", "DemoBlack", "UnrealBasal" });
+            "MyExampleThirdParty", "DemoBlack", "UnrealBasal" });
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 

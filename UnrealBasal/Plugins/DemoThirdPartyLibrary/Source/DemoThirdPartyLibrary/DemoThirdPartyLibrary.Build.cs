@@ -1,5 +1,6 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
+using System.IO;
 using UnrealBuildTool;
 
 public class DemoThirdPartyLibrary : ModuleRules
@@ -11,6 +12,7 @@ public class DemoThirdPartyLibrary : ModuleRules
 		PublicIncludePaths.AddRange(
 			new string[] {
 				// ... add public include paths required here ...
+				Path.Combine( ModuleDirectory, "..", "ThirdParty", "MyExampleThirdParty" ),
 			}
 			);
 				
@@ -29,8 +31,8 @@ public class DemoThirdPartyLibrary : ModuleRules
                 "CoreUObject",
                 "Engine",
                 "InputCore",
-
-                "DemoThirdPartyLibraryLibrary",
+                
+                "MyExampleThirdParty",
 				"Projects"
 				// ... add other public dependencies that you statically link with here ...
 			}

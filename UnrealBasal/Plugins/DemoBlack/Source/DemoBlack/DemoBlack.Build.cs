@@ -1,5 +1,6 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
+using System;
 using System.IO;
 using UnrealBuildTool;
 
@@ -9,12 +10,15 @@ public class DemoBlack : ModuleRules
 	{
 		PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
 		
+		Console.Write("DemoBlack.Build: ");
+		Console.WriteLine(ModuleDirectory);
+		
 		PublicIncludePaths.AddRange(
 			new string[] {
 				// ... add public include paths required here ...
                 // Path.Combine( ModuleDirectory, "..", "..", "..", "..", "Source", "UnrealBasal", "Public"),
                 // Path.Combine( ModuleDirectory, "..", "..", "..", "..", "Source", "UnrealBasal"),
-                Path.Combine( ModuleDirectory, "..", "..", "..", "DemoThirdPartyLibrary", "Source", "ThirdParty", "DemoThirdPartyLibraryLibrary" ),
+                Path.Combine( ModuleDirectory, "..", "..", "..", "DemoThirdPartyLibrary", "Source", "ThirdParty", "MyExampleThirdParty" ),
             }
 			);
 
@@ -34,7 +38,7 @@ public class DemoBlack : ModuleRules
 				"Core",
 				// ... add other public dependencies that you statically link with here ...
                 "UnrealBasal",
-                "DemoThirdPartyLibraryLibrary"
+                "MyExampleThirdParty"
             }
 			);
 			

@@ -1,6 +1,5 @@
 {
 	"FileVersion": 3,
-	"EngineAssociation": "{22E32999-4D56-4D88-7FFD-2B8F18895546}",
 	"Category": "",
 	"Description": "",
 	"Modules": [
@@ -58,8 +57,7 @@
 		},
 		{
 			"Name": "Restart",
-			"Enabled": true,
-			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/1bf89025ddf246e3af3c196d0426e0d3"
+			"Enabled": true
 		},
 		{
 			"Name": "GeometryCacheAbcFile",
@@ -123,5 +121,6 @@
 			"Name": "RenderDocPlugin",
 			"Enabled": true
 		}
-	]
+	],
+	"EngineAssociation": "{FF2D3E7C-44D6-CB22-6DE1-2C8F627EEA1E}"
 }
