@@ -122,5 +122,5 @@
 			"Enabled": true
 		}
 	],
-	"EngineAssociation": "{FF2D3E7C-44D6-CB22-6DE1-2C8F627EEA1E}"
+	"EngineAssociation": "%K_ENGINE_GUID%"
 }

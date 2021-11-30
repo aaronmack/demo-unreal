@@ -1063,3 +1063,6 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# clion
+.idea

@@ -71,7 +71,7 @@ SAFLAGS = $(DSOFLAGS)
   * Original Backup: {22E32999-4D56-4D88-7FFD-2B8F18895546}    G:/Documents/UnrealEngine
 
 * Use Env
-  * ENGINE_GUID: {22E32999-4D56-4D88-7FFD-2B8F18895546}
+  * setx K_ENGINE_GUID {xxx-xxxx-xxx...}
 
 ```bash
 {
