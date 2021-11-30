@@ -9,7 +9,7 @@ public class UnrealBasalTarget : TargetRules
 	{
 		Type = TargetType.Game;
 		DefaultBuildSettings = BuildSettingsVersion.V2;
-		LaunchModuleName = "UnrealBasal";
+		//LaunchModuleName = "UnrealBasal";
 		
 		ExtraModuleNames.AddRange( new string[] { "UnrealBasal" } );
 		ExtraModuleNames.AddRange( new string[] { "UTGame" } );
@@ -18,9 +18,9 @@ public class UnrealBasalTarget : TargetRules
 		// ExtraModuleNames.Add("UTTwinStick");
 		ExtraModuleNames.AddRange(new string[] { "UTTwinStick" });
 		
-		GlobalDefinitions.Add("UE_LIBRARY_ENABLED=1");
-		LinkType = TargetLinkType.Monolithic;
-		bShouldCompileAsDLL = true;
-		ExtraModuleNames.AddRange(new string[] { "UELibrary" });
+		//GlobalDefinitions.Add("UE_LIBRARY_ENABLED=1");
+		//LinkType = TargetLinkType.Monolithic;
+		//bShouldCompileAsDLL = true;
+		//ExtraModuleNames.AddRange(new string[] { "UELibrary" });
     }
 }
